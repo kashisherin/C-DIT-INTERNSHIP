@@ -1,0 +1,227 @@
+Source: https://en.wikipedia.org/wiki/Onam
+
+# Onam
+
+| Onam | |
+| --- | --- |
+| The *pookkalam* is an Onam tradition. | |
+| Official name | Onam, Thiruvonam |
+| Observed by | Malayalis |
+| Type | Hindu religious festival, Harvest festival |
+| Observances | * Sadya * Thiruvathira Kali * Puli Kali * Vallamkali |
+| Begins | *Chingam* (siṃha) masam, Atham (hastā) nakshatram |
+| Ends | *Chingam* (siṃha) masam, Thiruvonam (śrāvaṇa) nakshatram |
+| Date | Multi-day |
+| Duration | 10 days |
+| Frequency | Annual |
+| Related to | Balipratipada |
+
+**Onam** (IPA: [oːɳɐm]), the national festival of Keralam, is an annual harvest and Hindu cultural festival celebrated mostly by the people of Keralam and is traditionally associated with the legend of the benevolent Asura King Mahabali, who once ruled Keralam, returning each year to visit his people. A major annual event for Malayalis, it is the official festival of the state and includes a spectrum of cultural events.
+
+In 1961, during the tenure of Chief Minister Pattom Thanu Pillai, Onam was officially declared the national festival of Keralam. However, in the following year, large-scale celebrations were curtailed due to the Indo-China War. Despite this interruption, the government’s declaration marked a turning point, and from then onwards Onam gradually developed into a grand public festival celebrated across the state and among the Malayali diaspora.
+
+## Hindu mythology
+
+Onapottan, a mute folk character of North Malabar, symbolizes King Mahabali visiting homes during Onam with a palm-leaf umbrella and bell, blessing people in silence
+
+Onam commemorates the return of the generous daitya king Mahabali after he was banished to the netherworld by Vamana (the fifth avatar of Hindu deity Vishnu). According to the Hindu legends, after Indra (the king of the devas) is defeated by Mahabali (the king of the asuras), the devas ultimately seek refuge in Vishnu, who agrees to restore Indra to power. To do so, Vishnu incarnates as a dwarf priest called Vamana. Mahabali (himself a devotee of Vishnu) conducts ritual prayers, one of which is attended by Vamana, who requests only three feet (steps) of land to build a fire-altar. Mahabali agrees, despite being told about Vamana's divine nature by the sage Shukra. Vamana grows in size, and in three strides, encompasses all of the universe and beyond. The three worlds are restored to Indra, and Mahabali and the asuras are banished to the netherworld (Patala). However, witnessing Mahabali's love for his subjects, Vamana grants the king's sole wish to visit his kingdom once every year. This homecoming of Mahabali is celebrated as Onam in Kerala every year.
+
+The date of Onam celebration is based on the Panchāngam, and falls on the 22nd nakshatra Thiruvonam in the month *Chingam* of the Malayalam calendar, which in the Gregorian calendar falls between August–September.
+
+## History
+
+Vamana teaching king Mahabali, 1672 Dutch painting
+
+According to Kurup, Onam is the remembrance of Malayalis welcoming their last Chera King. The last Chera King is said to have crossed the Arabian Sea, a convenient way of saying that neither he nor his kingdom would ever return after the Namboothiris gradually rose to dominance and overthrew Chera rule with the help of some of his subordinates, while also fundamentally altering the political system in Keralam, creating new titles for revenue collection, appointing officials who were compliant with the Namboothiris and strategically controlling the population of Keralam. His kingdom was then divided among his subordinates. Later, these subordinates were historically had Namboothiri fathers, although they were not accepted into the Namboothiri caste. This was intended to keep the subordinates obedient and compliant with the Namboothiris, as their father were always a Namboothiri, while they themselves were not accepted as members of the Namboothiri caste.
+
+Ever since, all kings in Keralam (Cheralam, meaning the land of the Cheras), during their coronation ceremonies, have pledged that they would rule only until the Chera King returned, because the people never accepted their rule, and this pledge was necessary to quell popular uproar and revolts. The festival has ancient origins and is intricately linked with Hindu mythology. Literary and epigraphical evidence suggests that Onam has a long religious context and history in Keralam and neighbouring parts of South India.
+
+Festivals associated with the Śhravaṇa nakshatra also known as Tiruvōṇam/Ōṇam in various South Indian languages were observed in South India, and Sangam literature records celebrations held on the day of this nakṣatra. However, these references should not automatically be identified with the modern Onam festival of Keralam or its associated beliefs and traditions.
+
+Sangam literature may therefore preserve evidence of celebrations held on the Śravaṇa/Ōṇam nakṣatra day, but this does not necessarily provide evidence for the Onam festival as it is understood and celebrated in Keralam today. This does not automatically mean that every ancient occurrence of “Ōṇam” or “Tiruvōṇam” should be equated with the modern Keralam Onam festival exactly as it is celebrated today. The term originally has an astronomical/nakṣatra sense, and a festival held on the Tiruvōṇam/Śravaṇa day could naturally be described as a Tiruvōṇam festival. The modern Onam refers to the broader Kerala festival tradition.
+
+## Celebrations, rituals and practices
+
+[![](//thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Onam_celebration_in_a_college_in_kerala%2C_2026.webm/250px--Onam_celebration_in_a_college_in_kerala%2C_2026.webm.jpg?utm_source=en.wikipedia.org&utm_campaign=parser)](//upload.wikimedia.org/wikipedia/commons/transcoded/b/bd/Onam_celebration_in_a_college_in_kerala%2C_2026.webm/Onam_celebration_in_a_college_in_kerala%2C_2026.webm.240p.vp9.webm)
+
+Onam celebration in a college in Keralam, 2026
+
+[![](//thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Onam_celebration_in_a_campus_in_Keralam%2C_2026.webm/250px--Onam_celebration_in_a_campus_in_Keralam%2C_2026.webm.jpg?utm_source=en.wikipedia.org&utm_campaign=parser)](//upload.wikimedia.org/wikipedia/commons/transcoded/9/97/Onam_celebration_in_a_campus_in_Keralam%2C_2026.webm/Onam_celebration_in_a_campus_in_Keralam%2C_2026.webm.240p.vp9.webm)
+
+Onam celebration in a campus in Keralam, 2026
+
+Onam falls in the month of *Chingam*, which is the first month according to the Malayalam Calendar. The celebrations mark the Malayalam New Year, are spread over ten days, and conclude with Thiruvonam. The ten days are sequentially known as Atham, Chithira, Chodhi, Vishakam, Anizham, Thriketa, Moolam, Pooradam, Uthradam and Thiruvonam. The first and the last day are particularly important in Kerala and to Malayalee communities elsewhere.
+
+The Atham day is marked with the start of festivities at Thrikkakara Vamanamoorthy Temple, Kochi. This Vishnu temple is considered as the focal centre of Onam and the abode of Mahabali, with the raising of the festival flag. Parades are held, which are colourful and depict the elements of Kerala culture with floats and tableaux.
+
+Other days have a diverse range of celebrations and activities ranging from boat races, cultural programs, sports competitions, dance events, martial arts, *pookkalam* (a flower carpet), prayers, shopping, donating time or food for charity to spending time with family over feasts. Men and women wear traditional dress. The Kerala sari or Kasavu sari is particularly wore on this day.
+
+### *Athachamayam*
+
+Onam starts off every year with a parade called Athachamayam.
+
+[![](//thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Athachamayam_-_%E0%B4%85%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%AE%E0%B4%AF%E0%B4%82_-_Wiki_Loves_Onam_2024.webm/250px--Athachamayam_-_%E0%B4%85%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%AE%E0%B4%AF%E0%B4%82_-_Wiki_Loves_Onam_2024.webm.jpg?utm_source=en.wikipedia.org&utm_campaign=parser)](//upload.wikimedia.org/wikipedia/commons/transcoded/9/9f/Athachamayam_-_%E0%B4%85%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%AE%E0%B4%AF%E0%B4%82_-_Wiki_Loves_Onam_2024.webm/Athachamayam_-_%E0%B4%85%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%AE%E0%B4%AF%E0%B4%82_-_Wiki_Loves_Onam_2024.webm.240p.vp9.webm)
+
+Athachamayam 2024 Video
+
+The Onam celebrations across the state starts off with a grand procession at Thrippunithura near Kochi called Atthachamayam, also referred to as *Thripunithura Athachamayam*. The parade features decorated elephants marching, drum beats and other music, folk art forms, floats and colourfully dressed people with masks. In Kerala's history, the Kochi king used to head a grand military procession in full ceremonial robes from his palace to the Thrikkakara temple, meeting and greeting his people. In contemporary times, this a state-supported event.
+
+The parade floats traditionally feature scenes from epics such as the *Mahabharata* and the *Ramayana*. Additionally, some floats include themes from the *Bible* as well as current themes thereby highlighting unity and harmony.
+
+The procession path historically has been from Tripunithura to the Vamanamoorthy Temple in Thrikkakara, Ernakulam district. The temple is dedicated to Vishnu in his Vamana (dwarf) avatar. After arrival at the temple, the marchers offer a prayer.
+
+### *Pookkalam*
+
+onapookkalam by students in school
+
+*Onapookkalam*, *Athapookkalam* or just *Pookkalam*, is a flower carpet, generally circular, made out of gathered blossoms. Several varieties of flowers of differing tints are pinched up into little pieces to create patterns on the floor, particularly at entrances and temple premises. Lamps may be arranged in the middle or edges. It is typically the team initiative of girls and women, who accomplish it with a delicate touch and a personal artistic sense of tone and blending. When completed, a miniature pandal (umbrella) hung with little festoons may be erected over it.
+
+The traditional ritual of laying pookkalam starts on Atham day. The pookkalam on this day is called Athapoo, and it is relatively small in size. The size of the pookkalam grows in size progressively with each day of the Onam festival. Only yellow flowers will be used on Atham with only one circular layer made and the design is kept simple. Statues or figurines of Mahabali and Vamana are also installed at the entrance of each house on this day.
+
+Traditionally, Atthapookalams included flowers endemic to Kerala and the Dashapushpam (10-flowers), but nowadays all varieties of flowers are used. Earthen mounds, which look somewhat like square pyramids, representing Mahabali and Vamana are placed in the dung-plastered courtyards in front of the house along with the Pookalam, and beautifully decorated with flowers. All over Kerala, *Pookalam* competitions are a common sight on Onam day.
+
+### Music and dance
+
+Thiruvathira Kali dance during Onam.
+
+[![](//thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Kummattikali_-_%E0%B4%95%E0%B5%81%E0%B4%AE%E0%B5%8D%E0%B4%AE%E0%B4%BE%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%B3%E0%B4%BF_-_Wiki_Loves_Onam_2024.webm/250px--Kummattikali_-_%E0%B4%95%E0%B5%81%E0%B4%AE%E0%B5%8D%E0%B4%AE%E0%B4%BE%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%B3%E0%B4%BF_-_Wiki_Loves_Onam_2024.webm.jpg?utm_source=en.wikipedia.org&utm_campaign=parser)](//upload.wikimedia.org/wikipedia/commons/transcoded/7/7e/Kummattikali_-_%E0%B4%95%E0%B5%81%E0%B4%AE%E0%B5%8D%E0%B4%AE%E0%B4%BE%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%B3%E0%B4%BF_-_Wiki_Loves_Onam_2024.webm/Kummattikali_-_%E0%B4%95%E0%B5%81%E0%B4%AE%E0%B5%8D%E0%B4%AE%E0%B4%BE%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%B3%E0%B4%BF_-_Wiki_Loves_Onam_2024.webm.240p.vp9.webm)
+
+Kummattikali 2024
+
+Traditional dance forms including *Thiruvathira*, *Kummattikali*, *Pulikali*, *Thumbi Thullal*, *Onam Kali* and others. Thiruvathira Kali is a women's dance performed in a circle around a lamp. Kummattikali is a colourful-mask dance. In Thrissur, festivities include a procession consisting of caparisoned elephants surrounded by Kummatikali dancers. The masked dancers go from house to house performing the colourful Kummattikali. Onam Kali is a form of dance where players arrange themselves in circles around a pole or tree or lamp, then dance and sing songs derived from the *Ramayana* and other epics.
+
+Kathakali performances are a part of Onam tradition.
+
+Kathakali dance is also commonly performed during this time, with dancers enacting characters from the various Ancient Indian legends. A famous venue for this is at Valluvanad which is associated with the growth of Kathakali, and Cheruthuruthy, where Kerala Kalamandalam is located.
+
+### *Pulikali*: tiger dance
+
+*Pulikali* is a dance in tiger costumes.
+
+[![](//thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Pulikkali_-_%E0%B4%AA%E0%B5%81%E0%B4%B2%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%B3%E0%B4%BF.webm/250px--Pulikkali_-_%E0%B4%AA%E0%B5%81%E0%B4%B2%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%B3%E0%B4%BF.webm.jpg?utm_source=en.wikipedia.org&utm_campaign=parser)](//upload.wikimedia.org/wikipedia/commons/transcoded/6/6c/Pulikkali_-_%E0%B4%AA%E0%B5%81%E0%B4%B2%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%B3%E0%B4%BF.webm/Pulikkali_-_%E0%B4%AA%E0%B5%81%E0%B4%B2%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%B3%E0%B4%BF.webm.360p.mpeg4.mov)
+
+Pulikali from Thrissur in 2024
+
+Pulikali, also known as Kaduvakali, is a common sight during the Onam season. This dance showcases performers painted like tigers in bright yellow, red and black, who dance to the beats of instruments like Chenda and Thakil. This folk art is mainly performed in the cultural district of Thrissur and thousands pour into the city to be a part of this art.
+
+Performances of the ritual worship dance, Theyyam, are given during the Onam season. In this, Mahabali is played by the Onathar. Its variations include characters such as *Oneswaran* and *Onapottan*.
+
+At the Thrikkakara temple, every day of the festival showcases one or more of these activities including Kathakali, Thiruvathira, Chakyar Koothu, Ottam Thullal, Patakam, Onam songs, and percussion instrument shows. The Onasadya here is grand in scale, and is attended by over ten thousand people from all religions and faiths. Festivities include Puli Kali (masked leopard dance) and traditional dance forms like Kaikotti Kali which are performed in various functions. The official Government celebrations start on this day with heavy illuminations in Thiruvananthapuram, Kochi and Kozhikode along with fireworks.
+
+Most cities in Kerala, such as the political, commercial and cultural capitals, Thiruvananthapuram, Kochi and Thrissur, are lit up with lights and fabulous displays of fireworks. Sumptuous Onam Sadya feasts are prepared. In Thrikkakara temple, a mega-feast is conducted, which is open to the public and is attended by more than twenty thousand people.
+
+### *Vallamkali*: boat race
+
+An Onam boat race
+
+[![](//thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Nehru_Trophy_Boat_Race_-_%E0%B4%A8%E0%B5%86%E0%B4%B9%E0%B5%8D%E2%80%8C%E0%B4%B1%E0%B5%81_%E0%B4%9F%E0%B5%8D%E0%B4%B0%E0%B5%8B%E0%B4%AB%E0%B4%BF_%E0%B4%B5%E0%B4%B3%E0%B5%8D%E0%B4%B3%E0%B4%82%E0%B4%95%E0%B4%B3%E0%B4%BF_-_Wiki_Loves_Onam_2024.webm/250px--Nehru_Trophy_Boat_Race_-_%E0%B4%A8%E0%B5%86%E0%B4%B9%E0%B5%8D%E2%80%8C%E0%B4%B1%E0%B5%81_%E0%B4%9F%E0%B5%8D%E0%B4%B0%E0%B5%8B%E0%B4%AB%E0%B4%BF_%E0%B4%B5%E0%B4%B3%E0%B5%8D%E0%B4%B3%E0%B4%82%E0%B4%95%E0%B4%B3%E0%B4%BF_-_Wiki_Loves_Onam_2024.webm.jpg?utm_source=en.wikipedia.org&utm_campaign=parser)](//upload.wikimedia.org/wikipedia/commons/transcoded/7/72/Nehru_Trophy_Boat_Race_-_%E0%B4%A8%E0%B5%86%E0%B4%B9%E0%B5%8D%E2%80%8C%E0%B4%B1%E0%B5%81_%E0%B4%9F%E0%B5%8D%E0%B4%B0%E0%B5%8B%E0%B4%AB%E0%B4%BF_%E0%B4%B5%E0%B4%B3%E0%B5%8D%E0%B4%B3%E0%B4%82%E0%B4%95%E0%B4%B3%E0%B4%BF_-_Wiki_Loves_Onam_2024.webm/Nehru_Trophy_Boat_Race_-_%E0%B4%A8%E0%B5%86%E0%B4%B9%E0%B5%8D%E2%80%8C%E0%B4%B1%E0%B5%81_%E0%B4%9F%E0%B5%8D%E0%B4%B0%E0%B5%8B%E0%B4%AB%E0%B4%BF_%E0%B4%B5%E0%B4%B3%E0%B5%8D%E0%B4%B3%E0%B4%82%E0%B4%95%E0%B4%B3%E0%B4%BF_-_Wiki_Loves_Onam_2024.webm.240p.vp9.webm)
+
+Nehru trophy boat race 2024 at Punnamada lake Alappuzha
+
+The *Vallamkali* (the snake boat race) is another event that is synonymous with Onam. Well-known races include the Aranmula Uthrattadhi Boat Race and the Nehru Trophy Boat Race. Numerous oarsmen row huge snake-shaped boats. Men and women come from far and near to watch and cheer the snake boat race through the water. This event is particularly featured on the Pampa River, considered sacred.
+
+As a tribute to the traditional snake boat race, a similar snake boat race is also held by the Malayali diaspora in Singapore annually during Onam at the Jurong Lake.
+
+### *Onam Sadya*
+
+Sadya is the traditional nine or more course vegetarian meal served on banana leaf.
+
+Onam harvest festival is marked with a special feast lunch on last day and includes rice and a sweet at the end.
+
+[![](//thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Valla_Sadhya_-_%E0%B4%B5%E0%B4%B3%E0%B5%8D%E0%B4%B3%E0%B4%B8%E0%B4%A6%E0%B5%8D%E0%B4%AF_-_Wiki_Loves_Onam_2024.webm/250px--Valla_Sadhya_-_%E0%B4%B5%E0%B4%B3%E0%B5%8D%E0%B4%B3%E0%B4%B8%E0%B4%A6%E0%B5%8D%E0%B4%AF_-_Wiki_Loves_Onam_2024.webm.jpg?utm_source=en.wikipedia.org&utm_campaign=parser)](//upload.wikimedia.org/wikipedia/commons/transcoded/a/a2/Valla_Sadhya_-_%E0%B4%B5%E0%B4%B3%E0%B5%8D%E0%B4%B3%E0%B4%B8%E0%B4%A6%E0%B5%8D%E0%B4%AF_-_Wiki_Loves_Onam_2024.webm/Valla_Sadhya_-_%E0%B4%B5%E0%B4%B3%E0%B5%8D%E0%B4%B3%E0%B4%B8%E0%B4%A6%E0%B5%8D%E0%B4%AF_-_Wiki_Loves_Onam_2024.webm.240p.vp9.webm)
+
+Vallasadya at Aranmula
+
+The *Onam sadya* (feast) is another indispensable part of Onam, and almost every Keralite either makes or attends one. The Onasadya reflects the spirit of the season and is traditionally made with seasonal vegetables such as yam, cucumber, ash gourd and so on. The feast is served on plantain leaves and consists of nine courses, but may include over two dozen dishes, including (but not limited to): Chips (especially Banana chips), Sharkaraveratti (Fried pieces of banana coated with jaggery), Pappadam, various vegetable and soups such as Injipuli (also called PuliInji), Thoran, Mezhukkupuratti, Kaalan, Olan, Avial, Sambhar, Dal served along with a small quantity of ghee, Erisheri, Molosyam, Rasam, Puliseri (also referred to as Velutha curry), Kichadi (not to be confused with Khichdi) and Pachadi (its sweet variant), Moru (buttermilk or curd mixed with water), Pickles both sweet and sour, and coconut chutney. The feast ends with a series of dessert called Payasam (a sweet dish made of milk, sugar, jaggery, and other traditional Indian savouries) eaten either straight or mixed with ripe small plantain. The curries are served with rice, usually the 'Kerala Matta' parboiled rice preferred in Kerala.
+
+In hotels and temples, the number of curries and dishes may go up to 30. The importance of the feast to Kerala's Onam celebration culture is captured in the famous Malayalam proverb "*Kaanam Vittum Onam Unnanam*" which means "One must have the Onam lunch even by selling one's property if need be." The Travancore-style Onasadya is renowned to be the most disciplined and tradition-bound.
+
+The Kurichians tribe of Parambikkulam celebrate Onam as a festival for eating new grains. Just before Onam, they go for a community hunt and the game bagged during the hunt are distributed among participants and consumed in family feasts. The feasts are held on Uthradam and Thiruvonam. Their feast also include fish and meat.
+
+### Post Onam celebrations
+
+Normally, the largest chunk of Onam celebrations ends by Thiruvonam. However, the two days following Thiruvonam are also celebrated as Third and Fourth Onam. The third Onam, called **Avvittom** marks the preparations for King Mahabali's return ascension to heavens. The main ritual of the day is to take the Onathappan statue which was placed in the middle of every Pookkalam during the past 10 days and immerse it in nearby rivers or sea. The Pookkalam will be cleaned and removed after this ritual.
+
+### Other customs
+
+*Onapottan* in traditional costume is a custom in northern Kerala. *Onapottan* visits houses and gives blessings.
+
+People buy and wear new clothes for the occasion of Onam, called *Onakkodi*.
+
+During the Onam, Keralite Hindus install an image of Thrikkakara Appan or *Onatthappan* (Vishnu in the form of Vamana) in their home just as Hindus install images or murtis of Lord Ganesha on the Ganesha Chaturthi festival elsewhere.
+
+Many lamps are lit in Hindu temples of Kerala during this celebration. A palmyra tree is erected in front of temples and surrounded by a wooden balustrade and covered with dry palmyra leaves. It is lit with a torch and burned to ashes to signify that King Mahabali went to Patala as a sacrifice.
+
+The swing is another integral part of Onam, especially in rural areas. Young men and women, decked in their best, sing *Onappaatt*, or Onam songs, and rock one another on swings slung from high branches.
+
+Onam season is often associated with creativity as weavers and potters go for excess production to cater to increased demands for their products during the season, especially in the North Kerala regions of Kannur and Kasargod. Handloom fairs are an integral part of the spirit of Onam festivities these days.
+
+In some parts of Kerala, people indulge in various games and dances during and post-Thiruvonam. These are known as ***Onakkalikal***. These include competitions such as Ox races (***Maramadimatsaram***), ***Uriyady***, food-eating competitions, Pookalam competitions etc.in a special month.
+
+Kuravans of Travancore use Onam as a day for offering thanks to their ancestral spirits. On Uthradam day, they offer liquor, rice cakes, flattened and parched rice, incense, camphor, etc. to the spirits. The ritual ends with a request to the spirits to be satisfied with their offerings and assured that the next attempt would be better. Then an appeal is made to protect the believers and to ward off evil spirits from their area. This ritual is locally known as ***kalayam vaikkal***. A similar offering like this is done during Makaram harvest, known as ***Uchara***.
+
+### Outside India
+
+Onam celebration at Vienna in 2024
+
+Onam is also celebrated by the worldwide Malayali diaspora. Celebrations are notable in Oman, Malaysia, Switzerland, the United States, the United Arab Emirates, Singapore, United Kingdom, New Zealand, Australia, and France (notably Paris and Marseille).
+
+## Significance
+
+Onam is an ancient Hindu festival of Kerala that celebrates rice harvest.
+
+Christians also celebrate Onam in addition to Hindus. The festival has also expanded beyond geographical borders in recent years, with participation from other South Indian communities, including Tamils, Kannadigas, Telugus, etc. particularly in urban areas and culturally diverse contexts. However, a minority of Islamic scholars have occasionally expressed concerns about Muslim participation.
+
+### Mahabali and Vamana
+
+According to Hindu mythology, Mahabali was the great-great-grandson of a Brahmin sage named Kashyapa, the great-grandson of an asura king, Hiranyakashipu, and the grandson of Vishnu devotee Prahlada. This links the festival to the Puranic story of Prahlada of Holika fame in Hinduism, who was the son of Hiranyakashipu. Prahlada, despite being born to an asura father who hated Vishnu, rebelled against his father's persecution of people and worshipped Vishnu. Hiranyakashipu tries to kill his son Prahlada, but is slain by Vishnu in his Narasimha avatar, and Prahlada is saved.
+
+The dwarf Vamana taking a leap-step is a part of many Hindu temple arts (above), and one legend behind Onam.
+
+Prahlada's grandson, Mahabali, came to power by defeating the gods (devas) and taking over the three worlds. According to Vaishnavism, the defeated devas approached Vishnu for help in their battle with Mahabali. Vishnu refused to join the gods in violence against Mahabali because Mahabali was a good ruler and his own devotee. Mahabali, after his victory over the gods, declared that he would perform a *yajna* (*homa – a* sacrifice/ritual) and grant anyone any request during the *yajna*. Vishnu took the avatar – his fifth – of a dwarf monk called Vamana and approached Mahabali. The king offered anything to the boy – gold, cows, elephants, villages, food, whatever he wished. The boy said that one must not seek more than one needs, and all he needed was "three paces of land". Mahabali agreed.
+
+Vamana grew to an enormous size and covered everything Mahabali ruled over in just two paces. For the third pace, Mahabali offered his head for Vishnu to step on, an act that Vishnu accepted as evidence of Mahabali's devotion. Vishnu granted him a boon, by which Mahabali could visit again, once every year, the lands and people he previously ruled. This revisit marks the festival of Onam, as a reminder of the virtuous rule and his humility in keeping his promise before Vishnu. The last day of Mahabali's stay is remembered with a nine-course vegetarian Onasadya feast.
+
+The name Thrikkakara is originated from 'Thiru-kaal-kara', meaning 'place of the holy foot'. The main deity at Thrikkakara Temple is Vamana; the smaller temple to the side has Shiva as the deity. Vamana temple is known as 'Vadakkum Devar' and the Shiva temple is known as 'Tekkum Devar'. A number of subsidiary deities have been installed at Thrikkakara Temple. The 1961 census report on Onam festival states:
+
+> Though the Vamana temple is accepted as the main temple at the elite level, the local people consider the Shiva temple as the more important one. They believe that Shiva was the 'Kuladeivam' (family deity) of Mahabali and that there was no Vamana temple at that time. The palace of Mahabali was situated at the place where the Vamana temple is at present. After the fall of Mahabali, his palace was destroyed and later on Vamana was installed on that spot by the saint Kapila.
+
+According to Nanditha Krishna, a simpler form of this legend, one without Mahabali, is found in the *Rigveda* and the Vedic text *Shatapatha Brahmana* where a solar deity is described with powers of Vishnu. This story likely grew over time, and is in part allegorical, where *Bali* is a metaphor for thanksgiving offering after a bounty of rice harvest during monsoon, and *Vishnu* is the metaphor of the Kerala sun and summer that precedes the Onam. According to Roshen Dalal, the story of Mahabali is important to Onam in Kerala, but similar Mahabali legends are significant in the region of Balia and Bawan in Uttar Pradesh, Bharuch in Gujarat, and Mahabaleshwar in Maharashtra. The story is significant not because Mahabali's rule ended, but it emphasises the Hindu belief in cyclical nature of events, that no individual, no ruler and nothing lasts forever, except the virtues and self-understanding that overcomes all sorrow.
+
+### Parashurama
+
+Mahabali is worshipped as Onathappan during the Onam festival
+
+An alternate tale behind Onam relates to Parashurama, an incarnation of Vishnu who is credited in Hinduism with creating the Western Ghats and Kerala. According to this legend, Vishnu observed the kings of the Kshatriya (warrior) waging constant war on one another and growing arrogant. He assumed the avatar of Parashurama, the warrior sage, in the era of the king Kartavirya Arjuna. This king persecuted and oppressed the people, the sages, and the gods. Following the murder of his father Jamadagni, Parashurama swore vengeance against the king and the warrior class, slaying them as he travelled the world. When all the oppressors had been vanquished, he threw his axe into the ocean. The ocean retreated from the region where the axe descended, creating the land of Kerala. The Onam festival, according to this legend, celebrates Parashurama's creation of Kerala by marking those days as the new year.
+
+The legend and worship of Parashurama is attested in texts and epigraphs dated to about the 2nd century CE.
+
+### Cultural festival
+
+Onam is a "popular major Hindu festival in Kerala", states Christine Frost, but one that is also celebrated by other communities with "much zest alongside Hindus". The festival is celebrated in basic ecclesial communities (BECs) in Trivandrum with local rituals, according to Latin Catholic Bishop Selvister Ponnumuthan. These traditions, according to Ponnumuthan, start with the lighting of Nilavilakku, an *arati* that includes waving of flowers (*pushparati*) over the Bible, eating the Onam meal together with the Hindus as a form of "communion of brothers and sisters of different faiths". The significance of these practices are viewed by BECs in Trivandrum as a form of integration with Hindus, mutual respect and sharing a tradition.
+
+Paulinus of St. Bartholomew (1748–1806), in his *A voyage to the East Indies*, describes Onam as follows:
+
+> The fourth grand festival, celebrated in Malayala, is called Onam, and happens always in the month of September, on the day of new moon (not always). About the 10th of September the rain ceases in Malabar. All nature seems as if regenerated; the flowers again shoot up, and the trees bloom, in a word, this season is the same as that which Europeans call spring. This festival seems, therefore, to have been instituted for the purpose of soliciting from the Gods a happy and fruitful year. It continues eight days and during that time the Indians are accustomed to adorn their houses with flowers and daub them over with cow's dung; because the cow, as already observed, is a sacred animal dedicated to the Goddess Lakshmi, the Ceres of the Indians. On this occasion they also put on new clothes throw aside all their old earthenware and supply its place by new. The men, particularly those who are young, form themselves into two parties and shoot at each other with arrows. These arrows are blunted, but exceedingly strong, and are discharged with such force, that a considerable number are generally wounded on both sides. These games have a great likeness to the Cerealia and Juvenalia of the ancient Greeks and Romans.
+
+### Onam and Islam
+
+Activist Fais Umer hosting a 'Payasam Fest' in Kuttiady as part of Onam celebrations, in response to calls against Onam by salafi groups
+
+According to P.S. Salini, a scholar in Islamic studies, most Muslims join the festivities with their friends and celebrate Hindu festivals such as Onam. According to a 2001 chapter by Filippo Osella and Caroline Osella, both Hindus and non-Hindus have celebrated Onam equally "as a time when the unity of the family and kin group is particularly emphasized". In another 2008 paper, Osella and Osella narrate the story of a Muslim family in Kozhikode who prepared and shared a full vegetarian Onam sadhya, with women leading the cooking and celebration, despite warnings from some reformists to not celebrate Onam.
+
+Salafi sections of Islam have raised concerns about the celebration of Onam by Muslims. However majority of Muslims observe Onam anyway, considering its celebrations and rituals as a cultural practice.
+
+## See also
+
+* Mundu and Kerala sari - Common ethnic wear for Onam
+* Onathallu – Performed in Kerala during Onam.
+* Vallam Kali – a traditional boat race conducted during Onam
+
+## References
+
+## External links
+
+* Media related to Onam at Wikimedia Commons
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Onam&oldid=1383047462"

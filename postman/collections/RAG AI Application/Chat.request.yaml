@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://127.0.0.1:8000/chat
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"message\": \"What are the library timings on Sunday at Greenfield Institute of Technology?\"\r
+
+    }"
+order: 2000

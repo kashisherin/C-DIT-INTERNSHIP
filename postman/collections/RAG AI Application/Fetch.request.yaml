@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://127.0.0.1:8000/fetch
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"url\": \"https://en.wikipedia.org/wiki/Mohiniyattam\"\r
+
+    }"
+order: 7000

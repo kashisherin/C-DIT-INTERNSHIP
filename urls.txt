@@ -1,0 +1,10 @@
+# One URL per line. Lines starting with # are ignored.
+ https://en.wikipedia.org/wiki/Kerala
+ https://en.wikipedia.org/wiki/Thiruvananthapuram
+ https://en.wikipedia.org/wiki/Kochi
+ https://en.wikipedia.org/wiki/Onam
+ https://en.wikipedia.org/wiki/Kathakali
+ https://keralacm.gov.in/
+ https://cmo.kerala.gov.in/
+ https://kerala.gov.in/
+ https://kerala.gov.in/subdetail/NTM1ODMxNzQuNDg=/MjA0ODc2ODQuMzY=

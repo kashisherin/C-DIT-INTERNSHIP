@@ -1,0 +1,10 @@
+$kind: http-request
+url: http://127.0.0.1:8000/ask
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "question": "കേരളത്തിലെ ഓണം ഏത് മാസത്തിലാണ് ആഘോഷിക്കുന്നത്?"
+    }
+order: 4000
