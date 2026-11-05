@@ -20,7 +20,7 @@ JUNK_TAGS = ["script" , "style" , "noscript" , "nav" , "header" , "header" , "fo
              "aside" , "form" , "iframe" , "svg" , "button" , "img"]
 JUNK_SELECTORS = [
     ".mw-editsection", "sup.reference", ".reflist", ".navbox", ".hatnote",
-    ".mw-references-wrap", "#toc", ".noprint", ".metadata", ".sidebar",
+    ".mw-references-wrap", "#toc", ".noprint", ".metadata", ".sidebar",".printfooter",
 ]
 
 #MAIN TEXT

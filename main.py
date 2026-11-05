@@ -1,11 +1,11 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 import ollama
 import rag
 import scraper
-
+import grievance
 
 app = FastAPI(title="RAG AI Application")
 
@@ -157,4 +157,85 @@ def ask(request: AskRequest):
     return AskResponse(
         answer=answer,
         sources=chunks
+    )
+
+# ---------- Grievances ----------
+
+ALLOWED_TYPES = (
+    ".jpg",
+    ".jpeg",
+    ".png",
+    ".webp",
+    ".pdf"
+)
+
+MAX_UPLOAD_MB = 10
+# The list of departments for the official page
+
+@app.get("/departments")
+def departments():
+    return [
+        {
+            "code": code,
+            "name": name
+        }
+        for code, (name, handles) in grievance.DEPARTMENTS.items()
+    ]
+# Upload a grievance and let Gemma 4 read and classify it
+
+@app.post(
+    "/grievance/process",
+    response_model=grievance.GrievanceResult
+)
+def process_grievance(file: UploadFile):
+
+    filename = file.filename or ""
+
+    # Check file type
+    if not filename.lower().endswith(ALLOWED_TYPES):
+        raise HTTPException(
+            status_code=400,
+            detail="Upload a JPG, PNG, WEBP or PDF file."
+        )
+
+    # Read uploaded file
+    data = file.file.read()
+
+    # Check file size
+    if len(data) > MAX_UPLOAD_MB * 1024 * 1024:
+        raise HTTPException(
+            status_code=400,
+            detail=f"File is larger than {MAX_UPLOAD_MB} MB."
+        )
+
+    # Convert uploaded file into images
+    try:
+        images = grievance.file_to_images(data, filename)
+
+    except Exception as error:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Could not open the file: {error}"
+        )
+
+    # Analyse grievance using Gemma 4
+    try:
+        result = grievance.analyze_grievance(images)
+
+    except Exception as error:
+        raise HTTPException(
+            status_code=500,
+            detail=f"AI error: {error}"
+        )
+
+    # Get department name
+    name, handles = grievance.DEPARTMENTS[result.department]
+
+    return grievance.GrievanceResult(
+        summary=result.summary,
+        description=result.description,
+        department=result.department,
+        department_name=name,
+        department_reason=result.department_reason,
+        pages_read=len(images)
     )

@@ -1,5 +1,5 @@
 // The address of our FastAPI server
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "/api";
 
 async function request(path, options = {}) {
     let response;
