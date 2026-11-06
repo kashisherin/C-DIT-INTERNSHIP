@@ -1,3 +1,4 @@
+
 // One chat bubble. role is "user", "bot" or "error".
 export default function ChatMessage({ role, text, sources = [] }) {
     const isUser = role === "user";
@@ -8,8 +9,23 @@ export default function ChatMessage({ role, text, sources = [] }) {
         error: "bg-red-50 text-red-700 border border-red-200 rounded-bl-sm",
     }[role];
 
-    // The same web page can appear in several chunks; show each page once
-    const links = [...new Set(sources.map((s) => s.source))];
+    // Keep each source page once and retain its lowest distance
+    const sourceMap = new Map();
+
+    sources.forEach((source) => {
+        const existing = sourceMap.get(source.source);
+
+        if (
+            !existing ||
+            (typeof source.distance === "number" &&
+                (typeof existing.distance !== "number" ||
+                    source.distance < existing.distance))
+        ) {
+            sourceMap.set(source.source, source);
+        }
+    });
+
+    const links = [...sourceMap.values()];
 
     return (
         <div>
@@ -25,21 +41,27 @@ export default function ChatMessage({ role, text, sources = [] }) {
                 <div className="mt-2 text-sm">
                     <p className="font-semibold">Sources</p>
 
-                    <ul className="list-disc pl-5">
-                        {links.map((link) => (
-                            <li key={link}>
-                                {link.startsWith("http") ? (
+                    <ul className="list-disc pl-5 space-y-1">
+                        {links.map((source) => (
+                            <li key={source.source}>
+                                {source.source.startsWith("http") ? (
                                     <a
-                                        href={link}
+                                        href={source.source}
                                         target="_blank"
                                         rel="noreferrer"
                                         className="text-blue-600 hover:underline"
                                     >
-                                        {link}
+                                        {source.source}
                                     </a>
                                 ) : (
                                     <span className="text-gray-600">
-                                        {link}
+                                        {source.source}
+                                    </span>
+                                )}
+
+                                {typeof source.distance === "number" && (
+                                    <span className="ml-2 text-gray-500">
+                                        (Distance: {source.distance.toFixed(3)})
                                     </span>
                                 )}
                             </li>
