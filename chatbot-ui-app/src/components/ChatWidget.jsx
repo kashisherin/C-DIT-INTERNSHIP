@@ -1,22 +1,38 @@
+
 import { useEffect, useRef, useState } from "react";
 import { askQuestion } from "../api";
+import { useLanguage } from "../context/LanguageContext";
 import ChatMessage, { TypingIndicator } from "./ChatMessage";
 import ChatInput from "./ChatInput";
 
-const WELCOME = {
-    role: "bot",
-    text: "Hi! Ask me anything about Kerala and its government services.",
-};
-
-// A round button in the corner. Clicking it opens and closes the chat box.
 export default function ChatWidget() {
+    const { language } = useLanguage();
+    const isMalayalam = language === "ml";
+
+    const welcomeMessage = isMalayalam
+        ? "നമസ്കാരം! കേരളത്തെയും സർക്കാർ സേവനങ്ങളെയും കുറിച്ച് എന്തും ചോദിക്കാം."
+        : "Hi! Ask me anything about Kerala and its government services.";
+
     const [open, setOpen] = useState(false);
-    const [messages, setMessages] = useState([WELCOME]);
+    const [messages, setMessages] = useState([
+        { role: "bot", text: welcomeMessage },
+    ]);
     const [loading, setLoading] = useState(false);
 
     const bottomRef = useRef(null);
 
-    // Scroll to the newest message (only while the box is open)
+    // Update the welcome message when the language changes,
+    // provided the user has not started a conversation.
+    useEffect(() => {
+        setMessages((prev) => {
+            if (prev.length === 1 && prev[0].role === "bot") {
+                return [{ role: "bot", text: welcomeMessage }];
+            }
+            return prev;
+        });
+    }, [welcomeMessage]);
+
+    // Scroll to the newest message.
     useEffect(() => {
         if (open) {
             bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -32,19 +48,23 @@ export default function ChatWidget() {
         setLoading(true);
 
         try {
-            const data = await askQuestion(question);
+            const data = await askQuestion(question, language);
 
-            const reply = {
-                role: "bot",
-                text: data.answer,
-                sources: data.sources,
-            };
-
-            setMessages((prev) => [...prev, reply]);
+            setMessages((prev) => [
+                ...prev,
+                {
+                    role: "bot",
+                    text: data.answer,
+                    sources: data.sources,
+                },
+            ]);
         } catch (error) {
             setMessages((prev) => [
                 ...prev,
-                { role: "error", text: error.message },
+                {
+                    role: "error",
+                    text: error.message,
+                },
             ]);
         } finally {
             setLoading(false);
@@ -53,7 +73,6 @@ export default function ChatWidget() {
 
     return (
         <>
-            {/* Chat window */}
             {open && (
                 <div className="fixed bottom-24 right-6 z-50 flex h-[500px] w-[350px] flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl">
 
@@ -61,17 +80,21 @@ export default function ChatWidget() {
                     <div className="flex items-center justify-between bg-blue-600 px-4 py-3 text-white">
                         <div>
                             <h2 className="font-semibold">
-                                Kerala Assistant
+                                {isMalayalam
+                                    ? "കേരള അസിസ്റ്റന്റ്"
+                                    : "Kerala Assistant"}
                             </h2>
 
                             <p className="text-xs text-blue-100">
-                                Answers from official web pages
+                                {isMalayalam
+                                    ? "ഔദ്യോഗിക വെബ് പേജുകളിൽ നിന്നുള്ള ഉത്തരങ്ങൾ"
+                                    : "Answers from official web pages"}
                             </p>
                         </div>
 
                         <button
                             onClick={() => setOpen(false)}
-                            aria-label="Close chat"
+                            aria-label={isMalayalam ? "ചാറ്റ് അടയ്ക്കുക" : "Close chat"}
                             className="rounded-full p-1 hover:bg-blue-500"
                         >
                             <CloseIcon />
@@ -86,6 +109,7 @@ export default function ChatWidget() {
                                 role={message.role}
                                 text={message.text}
                                 sources={message.sources || []}
+                                language={language}
                             />
                         ))}
 
@@ -98,6 +122,7 @@ export default function ChatWidget() {
                     <ChatInput
                         onSend={handleSend}
                         disabled={loading}
+                        language={language}
                     />
                 </div>
             )}
@@ -105,7 +130,11 @@ export default function ChatWidget() {
             {/* Floating chat button */}
             <button
                 onClick={() => setOpen(!open)}
-                aria-label={open ? "Close chat" : "Open chat"}
+                aria-label={
+                    open
+                        ? (isMalayalam ? "ചാറ്റ് അടയ്ക്കുക" : "Close chat")
+                        : (isMalayalam ? "ചാറ്റ് തുറക്കുക" : "Open chat")
+                }
                 className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700"
             >
                 {open ? <CloseIcon /> : <ChatIcon />}
@@ -114,7 +143,6 @@ export default function ChatWidget() {
     );
 }
 
-// Chat icon
 function ChatIcon() {
     return (
         <svg
@@ -133,7 +161,6 @@ function ChatIcon() {
     );
 }
 
-// Close icon
 function CloseIcon() {
     return (
         <svg

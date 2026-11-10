@@ -24,3 +24,6 @@ chroma_db/
 # OS files
 .DS_Store
 Thumbs.dbchatbot-ui/ 
+
+# Machine Learning models
+models/

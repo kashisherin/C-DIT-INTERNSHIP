@@ -1,7 +1,12 @@
 
-// One chat bubble. role is "user", "bot" or "error".
-export default function ChatMessage({ role, text, sources = [] }) {
+export default function ChatMessage({
+    role,
+    text,
+    sources = [],
+    language = "en",
+}) {
     const isUser = role === "user";
+    const isMalayalam = language === "ml";
 
     const bubbleStyle = {
         user: "bg-blue-600 text-white rounded-br-sm",
@@ -9,7 +14,7 @@ export default function ChatMessage({ role, text, sources = [] }) {
         error: "bg-red-50 text-red-700 border border-red-200 rounded-bl-sm",
     }[role];
 
-    // Keep each source page once and retain its lowest distance
+    // Remove duplicate source pages and retain the lowest distance.
     const sourceMap = new Map();
 
     sources.forEach((source) => {
@@ -39,7 +44,9 @@ export default function ChatMessage({ role, text, sources = [] }) {
 
             {links.length > 0 && (
                 <div className="mt-2 text-sm">
-                    <p className="font-semibold">Sources</p>
+                    <p className="font-semibold">
+                        {isMalayalam ? "ഉറവിടങ്ങൾ" : "Sources"}
+                    </p>
 
                     <ul className="list-disc pl-5 space-y-1">
                         {links.map((source) => (
@@ -61,7 +68,8 @@ export default function ChatMessage({ role, text, sources = [] }) {
 
                                 {typeof source.distance === "number" && (
                                     <span className="ml-2 text-gray-500">
-                                        (Distance: {source.distance.toFixed(3)})
+                                        ({isMalayalam ? "ദൂരം" : "Distance"}:{" "}
+                                        {source.distance.toFixed(3)})
                                     </span>
                                 )}
                             </li>
@@ -73,7 +81,7 @@ export default function ChatMessage({ role, text, sources = [] }) {
     );
 }
 
-// Three bouncing dots while we wait for the answer
+// Three bouncing dots while waiting for an answer.
 export function TypingIndicator() {
     return (
         <div className="flex justify-start">
@@ -92,3 +100,4 @@ export function TypingIndicator() {
         </div>
     );
 }
+    

@@ -1,5 +1,6 @@
-// The address of our FastAPI server
-const API_URL = "http://127.0.0.1:8000";
+
+const API_URL =
+    import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000";
 
 async function request(path, options = {}) {
     let response;
@@ -8,20 +9,27 @@ async function request(path, options = {}) {
         response = await fetch(`${API_URL}${path}`, options);
     } catch {
         throw new Error(
-            "Cannot reach the API. Is uvicorn running on port 8000?"
+            "Cannot reach the API. Is the backend running?"
         );
     }
 
-    const data = await response.json();
+    let data;
+
+    try {
+        data = await response.json();
+    } catch {
+        throw new Error(`Invalid server response (${response.status})`);
+    }
 
     if (!response.ok) {
-        throw new Error(data.detail || `Request failed (${response.status})`);
+        throw new Error(
+            data.detail || `Request failed (${response.status})`
+        );
     }
 
     return data;
 }
 
-// Send JSON (used by the chatbot)
 function postJson(path, body) {
     return request(path, {
         method: "POST",
@@ -30,14 +38,19 @@ function postJson(path, body) {
     });
 }
 
-export function askQuestion(question) {
-    return postJson("/ask", { question });
+// RAG-based question answering
+export function askQuestion(question, language = "en") {
+    return postJson("/ask", {
+        question,
+        response_language: language,
+    });
 }
 
-// Send a file. FormData sets the right Content-Type (multipart) by itself.
-export function processGrievance(file) {
+// Grievance document processing using Gemma 4
+export function processGrievance(file, language = "en") {
     const form = new FormData();
     form.append("file", file);
+    form.append("language", language);
 
     return request("/grievance/process", {
         method: "POST",
@@ -45,6 +58,7 @@ export function processGrievance(file) {
     });
 }
 
+// Retrieve available government departments
 export function getDepartments() {
     return request("/departments");
 }
