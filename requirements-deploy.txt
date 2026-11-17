@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+chromadb
+google-genai
+python-dotenv
+pypdf
+pypdfium2
+Pillow
+python-multipart
+requests
+beautifulsoup4
+markdownify
+ollama

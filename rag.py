@@ -24,14 +24,16 @@ You can override the model path using MIRA_MODEL_PATH.
 import json
 import os
 import re
+import sqlite3
 from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
+import time
 import chromadb
-import ollama
 from dotenv import load_dotenv
 from google import genai
+from google.genai import types
 from pypdf import PdfReader
 
 
@@ -48,6 +50,34 @@ DOCS_FOLDER = Path(
     os.getenv("RAG_DOCS_FOLDER", str(BASE_DIR / "documents"))
 )
 
+# Uploaded grievance files are stored separately from public knowledge documents.
+GRIEVANCE_STORAGE_FOLDER = Path(
+    os.getenv(
+        "GRIEVANCE_STORAGE_FOLDER",
+        str(BASE_DIR / "grievance_storage")
+    )
+)
+
+# SQLite database containing the grievance records.
+GRIEVANCE_DB_PATH = Path(
+    os.getenv(
+        "GRIEVANCE_DB_PATH",
+        str(BASE_DIR / "database" / "grievances.db")
+    )
+)
+
+# Keep grievance vectors in a separate private ChromaDB directory.
+GRIEVANCE_DB_FOLDER = Path(
+    os.getenv(
+        "GRIEVANCE_DB_FOLDER",
+        str(BASE_DIR / "chroma_grievances")
+    )
+)
+
+GRIEVANCE_COLLECTION_NAME = os.getenv(
+    "RAG_GRIEVANCE_COLLECTION", "grievances"
+)
+
 DB_FOLDER = Path(
     os.getenv("RAG_DB_FOLDER", str(BASE_DIR / "chroma_db"))
 )
@@ -55,9 +85,27 @@ DB_FOLDER = Path(
 COLLECTION_NAME = os.getenv("RAG_COLLECTION", "documents")
 
 # Local embedding model through Ollama. Keep Ollama installed for this.
+# Embedding provider: ollama locally, gemini on Render.
+EMBED_PROVIDER = os.getenv(
+    "RAG_EMBED_PROVIDER",
+    "ollama"
+).strip().lower()
+
+# Local Ollama embedding model.
 EMBED_MODEL = os.getenv(
     "RAG_EMBED_MODEL",
     "embeddinggemma"
+)
+
+# Hosted Gemini embedding model.
+GEMINI_EMBED_MODEL = os.getenv(
+    "GEMINI_EMBED_MODEL",
+    "gemini-embedding-001"
+)
+
+# Use the same embedding dimensions for indexing and retrieval.
+EMBED_DIMENSIONS = int(
+    os.getenv("RAG_EMBED_DIMENSIONS", "768")
 )
 
 # Hosted Gemma model through the Google GenAI API.
@@ -102,6 +150,10 @@ MAX_DISTANCE = float(
 
 client = chromadb.PersistentClient(
     path=str(DB_FOLDER)
+)
+
+grievance_client = chromadb.PersistentClient(
+    path=str(GRIEVANCE_DB_FOLDER)
 )
 
 
@@ -296,6 +348,14 @@ def get_collection():
     )
 
 
+def get_grievance_collection():
+    """Return the private grievance collection, separate from public RAG."""
+    return grievance_client.get_or_create_collection(
+        name=GRIEVANCE_COLLECTION_NAME,
+        metadata={"hnsw:space": "cosine"}
+    )
+
+
 # ============================================================
 # 4. READ DOCUMENTS
 # ============================================================
@@ -427,48 +487,112 @@ def split_into_chunks(text: str) -> list[str]:
     return chunks
 
 
+
+
 # ============================================================
-# 6. CREATE EMBEDDINGS USING EMBEDDINGGEMMA
+# 6. CREATE EMBEDDINGS
 # ============================================================
 
-def embed(texts: list[str]) -> list[list[float]]:
+def embed(
+    texts: list[str],
+    task_type: str = "RETRIEVAL_DOCUMENT"
+) -> list[list[float]]:
 
     if not texts:
         return []
 
     embeddings = []
 
-    for start in range(
-        0,
-        len(texts),
-        EMBED_BATCH
-    ):
+    for start in range(0, len(texts), EMBED_BATCH):
 
-        batch = texts[
-            start:start + EMBED_BATCH
-        ]
+        batch = texts[start:start + EMBED_BATCH]
 
-        response = ollama.embed(
-            model=EMBED_MODEL,
-            input=batch
-        )
+        # ----------------------------------------
+        # LOCAL: OLLAMA EMBEDDINGS
+        # ----------------------------------------
 
-        batch_embeddings = response.get(
-            "embeddings"
-        )
+        if EMBED_PROVIDER == "ollama":
+
+            import ollama
+
+            response = ollama.embed(
+                model=EMBED_MODEL,
+                input=batch
+            )
+
+            batch_embeddings = response.get("embeddings")
+
+        # ----------------------------------------
+        # DEPLOYED: GEMINI EMBEDDINGS
+        # ----------------------------------------
+
+        elif EMBED_PROVIDER == "gemini":
+
+            for attempt in range(1, 6):
+
+                try:
+                    response = gemma_client.models.embed_content(
+                        model=GEMINI_EMBED_MODEL,
+                        contents=batch,
+                        config=types.EmbedContentConfig(
+                            task_type=task_type,
+                            output_dimensionality=EMBED_DIMENSIONS
+                        )
+                    )
+
+                    batch_embeddings = [
+                        item.values
+                        for item in (response.embeddings or [])
+                    ]
+
+                    # Pause between successful requests.
+                    time.sleep(2)
+
+                    break
+
+                except Exception as error:
+
+                    error_message = str(error)
+
+                    is_rate_limit = (
+                        "429" in error_message
+                        or "RESOURCE_EXHAUSTED" in error_message
+                    )
+
+                    if not is_rate_limit:
+                        raise
+
+                    if attempt == 5:
+                        raise
+
+                    wait_seconds = 50
+
+                    print(
+                        f"Gemini rate limit reached. "
+                        f"Retry {attempt}/5 in {wait_seconds} seconds..."
+                    )
+
+                    time.sleep(wait_seconds)
+
+        else:
+            raise ValueError(
+                f"Unsupported embedding provider: {EMBED_PROVIDER}"
+            )
+
+        # ----------------------------------------
+        # VALIDATE EMBEDDINGS
+        # ----------------------------------------
 
         if (
             not batch_embeddings
             or len(batch_embeddings) != len(batch)
         ):
-
             raise RuntimeError(
-                f"Embedding model '{EMBED_MODEL}' returned an invalid response."
+                f"Embedding provider '{EMBED_PROVIDER}' "
+                "returned an invalid response."
             )
 
-        embeddings.extend(
-            batch_embeddings
-        )
+        embeddings.extend(batch_embeddings)
 
     return embeddings
 
@@ -602,6 +726,163 @@ def index_documents() -> dict[str, int]:
     }
 
 
+def index_grievance_database() -> dict[str, int]:
+    """Index selected fields from the SQLite grievances table.
+
+    Citizen names and uploaded file paths are deliberately excluded from
+    embeddings. Grievance vectors are stored in a separate private ChromaDB
+    directory and collection, not in the public knowledge-base index.
+    """
+
+    if not GRIEVANCE_DB_PATH.is_file():
+        raise FileNotFoundError(
+            f"Grievance SQLite database not found: {GRIEVANCE_DB_PATH}"
+        )
+
+    connection = sqlite3.connect(str(GRIEVANCE_DB_PATH))
+    connection.row_factory = sqlite3.Row
+
+    try:
+        records = connection.execute(
+            """
+            SELECT
+                id,
+                grievance_id,
+                department_code,
+                summary,
+                description,
+                department_reason,
+                original_language,
+                status,
+                registered_at,
+                updated_at
+            FROM grievances
+            ORDER BY id
+            """
+        ).fetchall()
+    finally:
+        connection.close()
+
+    # Rebuild only the private grievance collection.
+    try:
+        grievance_client.delete_collection(
+            name=GRIEVANCE_COLLECTION_NAME
+        )
+    except Exception:
+        pass
+
+    collection = get_grievance_collection()
+    records_indexed = 0
+    chunks_indexed = 0
+
+    # Process records in small groups to avoid sending the entire database
+    # to the embedding API in one request.
+    for record in records:
+        grievance_text = "\n".join([
+            f"Grievance ID: {record['grievance_id'] or ''}",
+            f"Department: {record['department_code'] or ''}",
+            f"Summary: {record['summary'] or ''}",
+            f"Description: {record['description'] or ''}",
+            f"Department Reason: {record['department_reason'] or ''}",
+            f"Original Language: {record['original_language'] or 'unknown'}",
+            f"Status: {record['status'] or ''}",
+            f"Registered At: {record['registered_at'] or ''}",
+            f"Last Updated: {record['updated_at'] or ''}",
+        ])
+
+        chunks = split_into_chunks(grievance_text)
+        if not chunks:
+            print(
+                f"Skipped grievance {record['grievance_id']}: no text."
+            )
+            continue
+
+        embeddings = embed(chunks)
+        record_ids = [
+            f"grievance-{record['id']}-{chunk_number}"
+            for chunk_number in range(len(chunks))
+        ]
+        metadatas = [
+            {
+                "grievance_id": str(record['grievance_id'] or ''),
+                "department": str(record['department_code'] or 'UNASSIGNED'),
+                "status": str(record['status'] or ''),
+                "chunk": chunk_number,
+            }
+            for chunk_number in range(len(chunks))
+        ]
+
+        collection.add(
+            ids=record_ids,
+            documents=chunks,
+            embeddings=embeddings,
+            metadatas=metadatas,
+        )
+
+        records_indexed += 1
+        chunks_indexed += len(chunks)
+        print(
+            f"Indexed grievance {record['grievance_id']}: "
+            f"{len(chunks)} chunks"
+        )
+
+    return {
+        "records_indexed": records_indexed,
+        "chunks_indexed": chunks_indexed,
+    }
+
+
+def search_grievances(
+    question: str,
+    department: str
+) -> list[dict[str, Any]]:
+    """Search private grievance records for one authenticated department.
+
+    The caller must authenticate the official and derive the department
+    from trusted server-side account data. Never trust a browser-supplied
+    department value.
+    """
+
+    question = (question or "").strip()
+    department = (department or "").strip()
+    if not question or not department:
+        return []
+
+    collection = get_grievance_collection()
+    count = collection.count()
+    if count == 0:
+        return []
+
+    query_embedding = embed(
+        [question],
+        task_type="RETRIEVAL_QUERY"
+    )[0]
+
+    results = collection.query(
+        query_embeddings=[query_embedding],
+        n_results=min(TOP_K, count),
+        where={"department": department},
+        include=["documents", "metadatas", "distances"],
+    )
+
+    documents = (results.get("documents") or [[]])[0]
+    metadatas = (results.get("metadatas") or [[]])[0]
+    distances = (results.get("distances") or [[]])[0]
+
+    return [
+        {
+            "grievance_id": meta.get("grievance_id", ""),
+            "department": meta.get("department", ""),
+            "status": meta.get("status", ""),
+            "text": document,
+            "distance": round(float(distance), 4),
+        }
+        for document, meta, distance in zip(
+            documents, metadatas, distances
+        )
+    ]
+
+
 # ============================================================
 # 8. LIST INDEXED SOURCES
 # ============================================================
@@ -658,7 +939,8 @@ def search(question: str) -> list[dict[str, Any]]:
         return []
 
     query_embedding = embed(
-        [question]
+    [question],
+    task_type="RETRIEVAL_QUERY"
     )[0]
 
     results = collection.query(
