@@ -63,7 +63,7 @@ def require_official(request: Request):
 DATABASE_MANAGEMENT_COOKIE_SECURE = (
     os.getenv("OFFICIAL_COOKIE_SECURE", "false").lower() == "true"
 )
-DATABASE_MANAGEMENT_COOKIE_PATH = "/api/official/database"
+DATABASE_MANAGEMENT_COOKIE_PATH = "/official/database"
 
 
 def require_database_management(request: Request):
