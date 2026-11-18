@@ -159,21 +159,29 @@ def official_logout(response: Response):
 # 2. CORS CONFIGURATION
 # ============================================================
 
-ALLOWED_ORIGINS = [
-    origin.strip()
+# Read comma-separated origins from Render (or use local defaults).
+# Keep the deployed frontend origin explicitly allowed as a safe fallback.
+ALLOWED_ORIGINS = {
+    origin.strip().rstrip("/")
     for origin in os.getenv(
         "ALLOWED_ORIGINS",
         "http://localhost:5173,http://127.0.0.1:5173"
     ).split(",")
     if origin.strip()
-]
+}
+
+ALLOWED_ORIGINS.update({
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "https://cdit-rag-ui-yupm.onrender.com",
+})
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=ALLOWED_ORIGINS,
+    allow_origins=sorted(ALLOWED_ORIGINS),
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
-    allow_credentials=True,
 )
 
 
