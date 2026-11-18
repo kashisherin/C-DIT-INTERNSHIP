@@ -111,8 +111,8 @@ def official_login(
         value=token,
         max_age=official_auth.SESSION_DURATION_SECONDS,
         httponly=True,
-        secure=OFFICIAL_COOKIE_SECURE,
-        samesite="lax",
+        secure=True,
+        samesite="none",
         path="/"
     )
 
@@ -138,8 +138,8 @@ def official_logout(response: Response):
         key=official_auth.COOKIE_NAME,
         path="/",
         httponly=True,
-        secure=OFFICIAL_COOKIE_SECURE,
-        samesite="lax"
+        secure=True,
+        samesite="none"
     )
     response.delete_cookie(
         key=database_management_auth.COOKIE_NAME,
@@ -159,29 +159,21 @@ def official_logout(response: Response):
 # 2. CORS CONFIGURATION
 # ============================================================
 
-# Read comma-separated origins from Render (or use local defaults).
-# Keep the deployed frontend origin explicitly allowed as a safe fallback.
-ALLOWED_ORIGINS = {
-    origin.strip().rstrip("/")
+ALLOWED_ORIGINS = [
+    origin.strip()
     for origin in os.getenv(
         "ALLOWED_ORIGINS",
         "http://localhost:5173,http://127.0.0.1:5173"
     ).split(",")
     if origin.strip()
-}
-
-ALLOWED_ORIGINS.update({
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "https://cdit-rag-ui-yupm.onrender.com",
-})
+]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=sorted(ALLOWED_ORIGINS),
-    allow_credentials=True,
+    allow_origins=ALLOWED_ORIGINS,
     allow_methods=["*"],
     allow_headers=["*"],
+    allow_credentials=True,
 )
 
 
