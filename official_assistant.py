@@ -13,7 +13,6 @@ import os
 from pathlib import Path
 from typing import Literal
 
-import ollama
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 
@@ -22,11 +21,6 @@ import database
 
 BASE_DIR = Path(__file__).resolve().parent
 load_dotenv(BASE_DIR / ".env")
-
-OFFICIAL_MODEL = os.getenv(
-    "OFFICIAL_LOCAL_MODEL",
-    "gemma4:e4b"
-)
 
 # ============================================================
 # 1. QUESTION INTENT MODEL
@@ -609,39 +603,38 @@ CURRENT OFFICIAL QUESTION:
 """
 
     # ========================================================
-    # LOCAL GEMMA 4 — OFFICIAL INTENT UNDERSTANDING
+    # HOSTED GEMMA 4 — OFFICIAL INTENT UNDERSTANDING
     # ========================================================
 
     try:
-        response = ollama.chat(
-            model=OFFICIAL_MODEL,
-            messages=[
-                {
-                    "role": "user",
-                    "content": prompt
-                }
-            ],
-            format=OfficialIntent.model_json_schema(),
-            think=False,
-            options={
-                "temperature": 0,
-                "num_predict": 512
-            },
-            keep_alive="10m"
+        # Reuse the same Google GenAI client and hosted model as rag.py.
+        # This avoids requiring a local Ollama server on Render.
+        from rag import gemma_client, CHAT_MODEL
+        from google.genai import types
+
+        response = gemma_client.models.generate_content(
+            model=CHAT_MODEL,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                response_mime_type="application/json",
+                response_schema=OfficialIntent,
+                temperature=0,
+                max_output_tokens=512
+            )
         )
 
-        content = response.message.content.strip()
+        content = (response.text or "").strip()
 
         if not content:
             raise RuntimeError(
-                "Local Gemma returned an empty intent response."
+                "Hosted Gemma returned an empty intent response."
             )
 
         intent = OfficialIntent.model_validate_json(content)
 
     except Exception as error:
         raise RuntimeError(
-            f"Local Official AI model ({OFFICIAL_MODEL}) failed: {error}"
+            f"Hosted Official AI model failed: {error}"
         ) from error
 
     # Fill an explicitly stated slot number deterministically. This supports
