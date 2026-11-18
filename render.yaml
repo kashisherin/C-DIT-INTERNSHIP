@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: cdit-rag-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements-deploy.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: ADMIN_TOKEN
+        sync: false
+      - key: ALLOWED_ORIGINS
+        value: https://cdit-rag-ui.onrender.com
+
+  - type: web
+    name: cdit-rag-ui
+    runtime: static
+    buildCommand: cd chatbot-ui-app && npm install && npm run build
+    staticPublishPath: chatbot-ui-app/dist
+    envVars:
+      - key: VITE_API_BASE_URL
+        value: https://cdit-rag-api.onrender.com
